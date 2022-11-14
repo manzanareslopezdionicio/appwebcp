@@ -3,7 +3,119 @@
 {% block titulo %} Registro de miembros {% endblock %}
 
 {% block contenido %}
+<div class="card">
+    <div class="card-header">
+        Datos Personales:
+    </div>
+</div>
+<form class="row g-3">
+    <div class="col-md-3">
+      <label for="validationDefault01" class="form-label">Cédula</label>
+      <input type="text" class="form-control" id="cedula" required>
+    </div>
+    <div class="col-md-3">
+      <label for="validationDefault02" class="form-label">Nombres</label>
+      <input type="text" class="form-control" id="nombres" required>
+    </div>
+    <div class="col-md-3">
+      <label for="validationDefaultUsername" class="form-label">Apellidos</label>
+      <input type="text" class="form-control" id="apellidos" required>
+    </div>
+    <div class="col-md-3">
+        <label for="validationDefault03" class="form-label">Correo electronico</label>
+        <input type="text" class="form-control" id="email" required>
+    </div>
+    <div class="col-md-3">
+        <label for="validationDefaultUsername" class="form-label">Teléfono</label>
+        <input type="text" class="form-control" id="apellidos" required>
+    </div>
+    <div class="col-md-3">
+        <label for="validationDefaultUsername" class="form-label">Dirección</label>
+        <input type="text" class="form-control" id="direccion" required>
+    </div>
+    <div class="col-md-3">
+        <label for="validationDefaultUsername" class="form-label">Ciudad</label>
+        <input type="text" class="form-control" id="ciudad" required>
+    </div>
+    <div class="col-md-3">
+        <label for="validationDefault04" class="form-label">Departamento</label>
+        <select class="form-select" id="validationDefault04" required>
+          <option Seleccione un elemento de la lista="">Elige...</option>
+          <option>Chontales</option>
+          <option>Managua</option>
+          <option>Masaya</option>
+          <option>Granada</option>
+        </select>
+      </div>
+    <div class="col-md-3">
+      <label for="validationDefault04" class="form-label">Nivel Académico</label>
+      <select class="form-select" id="validationDefault04" required>
+        <option Seleccione un elemento de la lista="">Elige...</option>
+        <option>Universidad</option>
+        <option>Bachiller</option>
+        <option>Primaria</option>
+        <option>Ninguno</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <label for="validationDefault05" class="form-label">Profesión o Oficio</label>
+      <input type="text" class="form-control" id="oficio" required>
+    </div>
+    <div class="col-md-3">
+        <label for="">Estado Civil</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="estadocivil" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Casado(a)
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="estadocivil" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Soltero(a)
+            </label>
+          </div>
+    </div>
+    <div class="col-md-3">
+        <label for="">Sexo</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="sexo" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Masculino
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sexo" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Femenino
+            </label>
+          </div>
+    </div>
+    <div class="col-md-12">
+        <label for="validationDefaultUsername" class="form-label">Subir Fotografia</label>
+        <input type="file" class="form-control" id="foto">
+    </div>
+</div>
 
-<h1>Pagina en contruccion</h1>
+<div class="card">
+    <div class="card-header">
+        Datos Membresia:
+    </div>
+</div>
+    <div class="col-md-3">
+        <label for="">Fecha de aceptación</label>
+        <input type="date" name="fechaaceptacion" id="fechaaceptacion">
+
+    </div>
+    <div class="col-md-3">
+        <label for="">Fecha de Bautismo en Agua</label>
+        <input type="date" name="fechaaceptacion" id="fechaaceptacion">
+        
+    </div>
+
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Guardar...</button>
+    </div>
+  </form>
 
 {% endblock %}
