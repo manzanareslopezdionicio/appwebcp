@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,13 +14,13 @@
 <body>
     <nav class="navbar navbar-expand navbar-light bg-faded">
         <div class="container">
-            <a class="navbar-brand" href="#">Inicio</a>
+            <a class="navbar-brand" href="{{url_for('index')}}">Inicio</a>
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#" aria-current="page">Registro <span class="visually-hidden">(current)</span></a>
+                    <a class="nav-link active" href="{{url_for('form')}}" aria-current="page">Registro <span class="visually-hidden">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url_for('nosotros' ) }}">Contactos</a>
+                    <a class="nav-link" href="{{url_for('nosotros')}}">Contactos</a>
                 </li>
             </ul>
         </div>
