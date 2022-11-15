@@ -3,12 +3,11 @@
 {% block titulo %} Registro de miembros {% endblock %}
 
 {% block contenido %}
-<div class="card text-center">
-    <div class="card-header">
-        Datos Personales:
+<div class="card ">
+    <div class="card-header text-center">
+        <h5>Datos Personales</h5>
     </div>
-</div>
-<form class="row g-3">
+    <form class="row g-3">
     <div class="col-md-3">
       <label for="validationDefault01" class="form-label">Cédula</label>
       <input type="text" class="form-control" id="cedula" required>
@@ -47,79 +46,84 @@
           <option>Granada</option>
         </select>
       </div>
-    <div class="col-md-3">
-      <label for="validationDefault04" class="form-label">Nivel Académico</label>
-      <select class="form-select" id="validationDefault04" required>
-        <option Seleccione un elemento de la lista="">Elige...</option>
-        <option>Universidad</option>
-        <option>Bachiller</option>
-        <option>Primaria</option>
-        <option>Ninguno</option>
-      </select>
-    </div>
-    <div class="col-md-3">
-      <label for="validationDefault05" class="form-label">Profesión o Oficio</label>
-      <input type="text" class="form-control" id="oficio" required>
-    </div>
-    <div class="col-md-3">
+      <div class="col-md-3">
+        <label for="validationDefault04" class="form-label">Nivel Académico</label>
+        <select class="form-select" id="validationDefault04" required>
+          <option Seleccione un elemento de la lista="">Elige...</option>
+          <option>Universidad</option>
+          <option>Bachiller</option>
+          <option>Primaria</option>
+          <option>Ninguno</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label for="validationDefault05" class="form-label">Profesión o Oficio</label>
+        <input type="text" class="form-control" id="oficio" required>
+      </div>
+      <div class="col-md-3">
         <label for="">Estado Civil</label>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="estadocivil" id="flexRadioDefault1" checked>
             <label class="form-check-label" for="flexRadioDefault1">
               Casado(a)
             </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="estadocivil" id="flexRadioDefault2">
-            <label class="form-check-label" for="flexRadioDefault2">
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="estadocivil" id="flexRadioDefault2">
+          <label class="form-check-label" for="flexRadioDefault2">
               Soltero(a)
-            </label>
-          </div>
-    </div>
-    <div class="col-md-3">
+          </label>
+        </div>
+      </div>
+      <div class="col-md-3">
         <label for="">Sexo</label>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="sexo" id="flexRadioDefault1" checked>
             <label class="form-check-label" for="flexRadioDefault1">
               Masculino
             </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="sexo" id="flexRadioDefault2">
-            <label class="form-check-label" for="flexRadioDefault2">
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="sexo" id="flexRadioDefault2">
+          <label class="form-check-label" for="flexRadioDefault2">
               Femenino
-            </label>
-          </div>
-    </div>
-    <div class="col-md-12">
+          </label>
+        </div>
+      </div>
+      <div class="col-md-12">
         <label for="validationDefaultUsername" class="form-label">Subir Fotografia</label>
         <input type="file" class="form-control" id="foto">
-    </div>
-</div>
-
-<div class="card text-center">
-    <div class="card-header">
-        Datos Membresia:
-    </div>
-</div>
-    <div class="col-md-3">
+      </div>
+      <div class="card-header text-center">
+        <h5> Datos Ministerial</h5>
+      </div>
+      <div class="col-md-3">
         <label for="">Fecha de aceptación</label>
         <input type="date" name="fechaaceptacion" id="fechaaceptacion">
-    </div>
-    <div class="col-md-3">
+      </div>
+      <div class="col-md-3">
+        <label for="">Tipo de Bautismo</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="tipobautismo" id="flexRadioDefault1" checked>
+            <label class="form-check-label" for="flexRadioDefault1">
+              En Agua
+            </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="tipobautismo" id="flexRadioDefault2">
+          <label class="form-check-label" for="flexRadioDefault2">
+              En Espiritu
+          </label>
+        </div>
+      </div>
+      <div class="col-md-3">
         <label for="">Fecha de Bautismo en Agua</label>
-        <input type="date" name="fechaaceptacion" id="fechaaceptacion">
+        <input type="date" name="fechaaceptacion" id="fechabautismo">
+      </div>
     </div>
-
     <div class="col-12">
       <button class="btn btn-primary" type="submit">Guardar...</button>
     </div>
-  </form>
-
-  <div class="card text-center">
-    <div class="card-header">
-        Datos Personales:
-    </div>
-</div>
-
+  </div>
+</form>
 {% endblock %}
