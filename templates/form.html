@@ -3,6 +3,7 @@
 {% block titulo %} Registro de miembros {% endblock %}
 
 {% block contenido %}
+<br>
 <div class="card ">
     <div class="card-header text-center">
         <h5>Datos Personales</h5>
@@ -120,10 +121,64 @@
         <label for="">Fecha de Bautismo en Agua</label>
         <input type="date" name="fechaaceptacion" id="fechabautismo">
       </div>
+      <div class="col-md-3">
+        <label for="validationDefault04" class="form-label">Grupo Familiar</label>
+        <select class="form-select" id="validationDefault04" required>
+          <option Seleccione un elemento de la lista="">Elige...</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label for="validationDefault04" class="form-label">Nombre de Campos</label>
+        <select class="form-select" id="validationDefault04" required>
+          <option Seleccione un elemento de la lista="">Elige...</option>
+          <option>Juigalpa</option>
+          <option>Villa Sandino</option>
+          <option>Cuapa</option>
+          <option>El Acetunal</option>
+          <option>La Palma</option>
+          <option>El Jobito</option>
+          <option>El Silencio</option>
+          <option>La Piedra Pintada</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label for="validationDefault04" class="form-label">Ministerio</label>
+        <select class="form-select" id="validationDefault04" required>
+          <option Seleccione un elemento de la lista="">Elige...</option>
+          <option>Juigalpa</option>
+          <option>Villa Sandino</option>
+          <option>Cuapa</option>
+          <option>El Acetunal</option>
+          <option>La Palma</option>
+          <option>El Jobito</option>
+          <option>El Silencio</option>
+          <option>La Piedra Pintada</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label for="validationDefault04" class="form-label">Cargo Ministerio</label>
+        <select class="form-select" id="validationDefault04" required>
+          <option Seleccione un elemento de la lista="">Elige...</option>
+          <option>Juigalpa</option>
+          <option>Villa Sandino</option>
+          <option>Cuapa</option>
+          <option>El Acetunal</option>
+          <option>La Palma</option>
+          <option>El Jobito</option>
+          <option>El Silencio</option>
+          <option>La Piedra Pintada</option>
+        </select>
+      </div>
     </div>
-    <div class="col-12">
-      <button class="btn btn-primary" type="submit">Guardar...</button>
+    <br>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button class="btn btn-outline-primary " type="submit"><i class="bi bi-save-fill"></i> Guardar...</button>
     </div>
+    <br>
   </div>
 </form>
 {% endblock %}

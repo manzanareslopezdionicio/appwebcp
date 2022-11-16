@@ -9,25 +9,30 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="/templates/static/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 <title>{% block titulo %} {% endblock %}</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand navbar-dark bg-primary">
-        <div class="container"> 
-            <a class="navbar-brand" href="{{url_for('index')}}">Inicio</a>
-            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" href="{{url_for('form')}}" aria-current="page">Registro <span class="visually-hidden">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{url_for('nosotros')}}">Contactos</a>
-                </li>
-            </ul>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Registro de Miembros</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Inicio</a>
+              <a class="nav-link" href="{{url_for('form')}}">Registro</a>
+              <a class="nav-link" href="{{url_for('nosotros')}}">Contacto</a>
+            </div>
+          </div>
         </div>
-    </nav>
+      </nav>
 <div class="container">
     <div class="row">
         <div class="col-12">
+            <br>
+            <br>
             {% block contenido %} 
             {% endblock %}
         </div>
@@ -35,5 +40,15 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+<script>
+    var nav = document.querySelector('nav');
+    window.addEventListener('scroll', function () {
+        if(window.pageYOffset > 100 ) {
+            nav.classList.add('bg-dark', 'shadow');
+        } else {
+            nav.classList.remove('bg-dark','shadow');
+        }
+    });
+</script>
 </body>
 </html>
