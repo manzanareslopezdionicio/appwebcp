@@ -3,6 +3,8 @@
 {% block titulo %} Registro de miembros {% endblock %}
 
 {% block contenido %}
+<link rel="stylesheet" href="https://unpkg.com/@adminkit/core@latest/dist/css/app.css">
+
 <br>
 <div class="card ">
     <div class="card-header text-center">
@@ -11,7 +13,7 @@
     <form class="row g-3">
     <div class="col-md-3">
       <label for="validationDefault01" class="form-label">Cédula</label>
-      <input type="text" class="form-control" id="cedula" required>
+      <input type="text" class="form-control" id="cedula" data-inputmask-mask="[9-]AAA-999" required>
     </div>
     <div class="col-md-3">
       <label for="validationDefault02" class="form-label">Nombres</label>
@@ -163,8 +165,8 @@
         <label for="validationDefault04" class="form-label">Cargo Ministerio</label>
         <select class="form-select" id="validationDefault04" required>
           <option Seleccione un elemento de la lista="">Elige...</option>
-          <option>Juigalpa</option>
-          <option>Villa Sandino</option>
+          <option>Presidente(a)</option>
+          <option>Secretario(a)</option>
           <option>Cuapa</option>
           <option>El Acetunal</option>
           <option>La Palma</option>
@@ -181,4 +183,6 @@
     <br>
   </div>
 </form>
+<script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>
+
 {% endblock %}
