@@ -1,4 +1,8 @@
 $(document).ready(function(){
-    $("#cedula").mask("000-000000-0000X");
-    $("#telefono").mask("0000-0000");
+    $("#cedula").mask('DDD-DDDDDD-DDDDA', {'translation':{
+        D: {pattern: /[0-9]/},
+        A: {pattern: /[A-Za-z]/},
+    }});
+
+    $("#telefono").mask('0000-0000');
 });
