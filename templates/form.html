@@ -3,7 +3,6 @@
 {% block titulo %} Registro de miembros {% endblock %}
 
 {% block contenido %}
-<link rel="stylesheet" href="https://unpkg.com/@adminkit/core@latest/dist/css/app.css">
 
 <br>
 <div class="card ">
@@ -13,7 +12,7 @@
     <form class="row g-3">
     <div class="col-md-3">
       <label for="validationDefault01" class="form-label">Cédula</label>
-      <input type="text" class="form-control" id="cedula" data-inputmask-mask="[9-]AAA-999" required>
+      <input type="text" class="form-control" name="cedula" id="cedula" placeholder="999-999999-9999A" required>
     </div>
     <div class="col-md-3">
       <label for="validationDefault02" class="form-label">Nombres</label>
@@ -29,7 +28,7 @@
     </div>
     <div class="col-md-3">
         <label for="validationDefaultUsername" class="form-label">Teléfono</label>
-        <input type="text" class="form-control" id="apellidos" required>
+        <input type="text" class="form-control" name="telefono" data-mask="9999-9999A" placeholder="(505) 9999-9999" required>
     </div>
     <div class="col-md-3">
         <label for="validationDefaultUsername" class="form-label">Dirección</label>
@@ -184,5 +183,13 @@
   </div>
 </form>
 <script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<script>
+  $(document).ready(function(){
+  $('#birth-date').mask('00/00/0000');
+  $('#cedula').mask('0000-0000');
+});
+</script>
+
 
 {% endblock %}
