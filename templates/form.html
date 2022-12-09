@@ -9,7 +9,7 @@
     <div class="card-header text-center">
         <h5>Datos Personales</h5>
     </div>
-    <form class="row g-3">
+    <form class="row g-3" >
     <div class="col-md-3">
       <label for="validationDefault01" class="form-label">Cédula</label>
       <input type="text" class="form-control" name="cedula" id="cedula" placeholder="999-999999-9999A" required>
@@ -28,7 +28,7 @@
     </div>
     <div class="col-md-3">
         <label for="validationDefaultUsername" class="form-label">Teléfono</label>
-        <input type="text" class="form-control" name="telefono" data-mask="0000-0000" placeholder="(505) 9999-9999" required>
+        <input type="text" class="form-control" name="telefono" data-mask="(505) 0000-0000" placeholder="(505) 9999-9999" required>
     </div>
     <div class="col-md-3">
         <label for="validationDefaultUsername" class="form-label">Dirección</label>
@@ -37,6 +37,9 @@
     <div class="col-md-3">
         <label for="validationDefaultUsername" class="form-label">Ciudad</label>
         <input type="text" class="form-control" id="ciudad" required>
+        <div class="invalid-feedback">
+          Proporcione una ciudad válida.
+        </div>
     </div>
     <div class="col-md-3">
         <label for="validationDefault04" class="form-label">Departamento</label>
@@ -95,6 +98,9 @@
       <div class="col-md-12">
         <label for="validationDefaultUsername" class="form-label">Subir Fotografia</label>
         <input type="file" class="form-control" id="foto">
+
+        
+
       </div>
       <div class="card-header text-center">
         <h5> Datos Ministerial</h5>
