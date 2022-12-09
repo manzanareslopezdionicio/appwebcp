@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
-
 {% block titulo %} Registro de miembros {% endblock %}
-
 {% block contenido %}
 
 <br>
@@ -9,10 +7,13 @@
     <div class="card-header text-center">
         <h5>Datos Personales</h5>
     </div>
-    <form class="row g-3" >
+    <form class="row g-3 needs-validation" novalidate>
     <div class="col-md-3">
       <label for="validationDefault01" class="form-label">Cédula</label>
       <input type="text" class="form-control" name="cedula" id="cedula" placeholder="999-999999-9999A" required>
+      <div class="invalid-feedback">
+        Por favor, agregar su cédula.
+      </div>
     </div>
     <div class="col-md-3">
       <label for="validationDefault02" class="form-label">Nombres</label>
@@ -38,7 +39,7 @@
         <label for="validationDefaultUsername" class="form-label">Ciudad</label>
         <input type="text" class="form-control" id="ciudad" required>
         <div class="invalid-feedback">
-          Proporcione una ciudad válida.
+          Por favor, agregar una ciudad válida.
         </div>
     </div>
     <div class="col-md-3">
@@ -52,8 +53,8 @@
         </select>
       </div>
       <div class="col-md-3">
-        <label for="validationDefault04" class="form-label">Nivel Académico</label>
-        <select class="form-select" id="validationDefault04" required>
+        <label for="nivelacademico" class="form-label">Nivel Académico</label>
+        <select class="form-select" id="nivelacademico" required>
           <option Seleccione un elemento de la lista="">Elige...</option>
           <option>Universidad</option>
           <option>Bachiller</option>
@@ -68,7 +69,7 @@
       <div class="col-md-3">
         <label for="">Estado Civil</label>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="estadocivil" id="flexRadioDefault1" checked>
+            <input class="form-check-input" type="radio" name="estadocivil" id="flexRadioDefault1" checked required>
             <label class="form-check-label" for="flexRadioDefault1">
               Casado(a)
             </label>
@@ -83,7 +84,7 @@
       <div class="col-md-3">
         <label for="">Sexo</label>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="sexo" id="flexRadioDefault1" checked>
+            <input class="form-check-input" type="radio" name="sexo" id="flexRadioDefault1" checked required>
             <label class="form-check-label" for="flexRadioDefault1">
               Masculino
             </label>
@@ -98,9 +99,6 @@
       <div class="col-md-12">
         <label for="validationDefaultUsername" class="form-label">Subir Fotografia</label>
         <input type="file" class="form-control" id="foto">
-
-        
-
       </div>
       <div class="card-header text-center">
         <h5> Datos Ministerial</h5>
@@ -188,14 +186,27 @@
     <br>
   </div>
 </form>
-<script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-<script>
-  $(document).ready(function(){
-  $('#birth-date').mask('00/00/0000');
-  $('#cedula').mask('0000-0000');
-});
-</script>
 
+<script>
+  // Ejemplo de JavaScript inicial para deshabilitar el envío de formularios si hay campos no válidos
+(function () {
+  'use strict'
+
+  // Obtener todos los formularios a los que queremos aplicar estilos de validación de Bootstrap personalizados
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Bucle sobre ellos y evitar el envío
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
 
 {% endblock %}
