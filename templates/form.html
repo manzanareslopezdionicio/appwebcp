@@ -7,43 +7,43 @@
     <div class="card-header text-center">
         <h5>Datos Personales</h5>
     </div>
-    <form class="row g-3 needs-validation" novalidate>
+    <form class="row g-3">
     <div class="col-md-3">
-      <label for="validationDefault01" class="form-label">Cédula</label>
+      <label for="cedula" class="form-label">Cédula</label>
       <input type="text" class="form-control" name="cedula" id="cedula" placeholder="999-999999-9999A" required>
-      <div class="invalid-feedback">
+      <div class="">
         Por favor, agregar su cédula.
       </div>
     </div>
     <div class="col-md-3">
-      <label for="validationDefault02" class="form-label">Nombres</label>
-      <input type="text" class="form-control" id="nombres" required>
+      <label for="nombres" class="form-label">Nombres</label>
+      <input type="text" class="form-control" name="nombrea" id="nombres" required>
     </div>
     <div class="col-md-3">
-      <label for="validationDefaultUsername" class="form-label">Apellidos</label>
-      <input type="text" class="form-control" id="apellidos" required>
+      <label for="apellidos" class="form-label">Apellidos</label>
+      <input type="text" class="form-control" name="apellidos" id="apellidos" required>
     </div>
     <div class="col-md-3">
-        <label for="validationDefault03" class="form-label">Correo electronico</label>
-        <input type="text" class="form-control" id="email" required>
+        <label for="email" class="form-label">Correo electronico</label>
+        <input type="email" class="form-control" name="email" id="email" required>
     </div>
     <div class="col-md-3">
-        <label for="validationDefaultUsername" class="form-label">Teléfono</label>
+        <label for="telefono" class="form-label">Teléfono</label>
         <input type="text" class="form-control" name="telefono" data-mask="(505) 0000-0000" placeholder="(505) 9999-9999" required>
     </div>
     <div class="col-md-3">
-        <label for="validationDefaultUsername" class="form-label">Dirección</label>
-        <input type="text" class="form-control" id="direccion" required>
+        <label for="direccion" class="form-label">Dirección</label>
+        <input type="text" class="form-control" name="direccion" id="direccion" required>
     </div>
     <div class="col-md-3">
-        <label for="validationDefaultUsername" class="form-label">Ciudad</label>
-        <input type="text" class="form-control" id="ciudad" required>
+        <label for="ciudad" class="form-label">Ciudad</label>
+        <input type="text" class="form-control" name="ciudad" id="ciudad" required>
         <div class="invalid-feedback">
           Por favor, agregar una ciudad válida.
         </div>
     </div>
     <div class="col-md-3">
-        <label for="validationDefault04" class="form-label">Departamento</label>
+        <label for="departamento" class="form-label">Departamento</label>
         <select class="form-select" id="validationDefault04" required>
           <option Seleccione un elemento de la lista="">Elige...</option>
           <option>Chontales</option>
@@ -54,7 +54,7 @@
       </div>
       <div class="col-md-3">
         <label for="nivelacademico" class="form-label">Nivel Académico</label>
-        <select class="form-select" id="nivelacademico" required>
+        <select class="form-select" name="nivelacademico" id="nivelacademico" required>
           <option Seleccione un elemento de la lista="">Elige...</option>
           <option>Universidad</option>
           <option>Bachiller</option>
@@ -63,20 +63,20 @@
         </select>
       </div>
       <div class="col-md-3">
-        <label for="validationDefault05" class="form-label">Profesión o Oficio</label>
-        <input type="text" class="form-control" id="oficio" required>
+        <label for="profesion" class="form-label">Profesión o Oficio</label>
+        <input type="text" class="form-control" name="profesion" id="profesion" required>
       </div>
       <div class="col-md-3">
-        <label for="">Estado Civil</label>
+        <label for="estadocivil" class="form-laber">Estado Civil</label>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="estadocivil" id="flexRadioDefault1" checked required>
-            <label class="form-check-label" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="estadocivil" id="estadocivil" checked required>
+            <label class="form-check-label" for="estadocivil">
               Casado(a)
             </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="estadocivil" id="flexRadioDefault2">
-          <label class="form-check-label" for="flexRadioDefault2">
+          <input class="form-check-input" type="radio" name="estadocivil" id="estadocivil">
+          <label class="form-check-label" for="estadocivil">
               Soltero(a)
           </label>
         </div>
@@ -84,51 +84,51 @@
       <div class="col-md-3">
         <label for="">Sexo</label>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="sexo" id="flexRadioDefault1" checked required>
-            <label class="form-check-label" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="sexo" id="sexo" checked required>
+            <label class="form-check-label" for="sexo">
               Masculino
             </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="sexo" id="flexRadioDefault2">
-          <label class="form-check-label" for="flexRadioDefault2">
+          <input class="form-check-input" type="radio" name="sexo" id="sexo">
+          <label class="form-check-label" for="sexo">
               Femenino
           </label>
         </div>
       </div>
       <div class="col-md-12">
-        <label for="validationDefaultUsername" class="form-label">Subir Fotografia</label>
-        <input type="file" class="form-control" id="foto">
+        <label for="foto" class="form-label">Subir Fotografia</label>
+        <input type="file" class="form-control" name="foto" id="foto">
       </div>
       <div class="card-header text-center">
         <h5> Datos Ministerial</h5>
       </div>
       <div class="col-md-3">
-        <label for="">Fecha de aceptación</label>
+        <label for="fechaaceptacion">Fecha de aceptación</label>
         <input type="date" name="fechaaceptacion" id="fechaaceptacion">
       </div>
       <div class="col-md-3">
         <label for="">Tipo de Bautismo</label>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="tipobautismo" id="flexRadioDefault1" checked>
-            <label class="form-check-label" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="tipobautismo" id="tipobautismo" checked>
+            <label class="form-check-label" for="tipobautismo">
               En Agua
             </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="tipobautismo" id="flexRadioDefault2">
-          <label class="form-check-label" for="flexRadioDefault2">
+          <input class="form-check-input" type="radio" name="tipobautismo" id="tipobautismo">
+          <label class="form-check-label" for="tipobautismo">
               En Espiritu
           </label>
         </div>
       </div>
       <div class="col-md-3">
         <label for="">Fecha de Bautismo en Agua</label>
-        <input type="date" name="fechaaceptacion" id="fechabautismo">
+        <input type="date" name="fechabautismo" id="fechabautismo">
       </div>
       <div class="col-md-3">
-        <label for="validationDefault04" class="form-label">Grupo Familiar</label>
-        <select class="form-select" id="validationDefault04" required>
+        <label for="grupo" class="form-label">Grupo Familiar</label>
+        <select class="form-select" name="grupo" id="grupo" required>
           <option Seleccione un elemento de la lista="">Elige...</option>
           <option>1</option>
           <option>2</option>
@@ -137,8 +137,8 @@
         </select>
       </div>
       <div class="col-md-3">
-        <label for="validationDefault04" class="form-label">Nombre de Campos</label>
-        <select class="form-select" id="validationDefault04" required>
+        <label for="nombrecampos" class="form-label">Nombre de Campos</label>
+        <select class="form-select" id="nombrecampos" required>
           <option Seleccione un elemento de la lista="">Elige...</option>
           <option>Juigalpa</option>
           <option>Villa Sandino</option>
@@ -151,8 +151,8 @@
         </select>
       </div>
       <div class="col-md-3">
-        <label for="validationDefault04" class="form-label">Ministerio</label>
-        <select class="form-select" id="validationDefault04" required>
+        <label for="ministerio" class="form-label">Ministerio</label>
+        <select class="form-select" name="ministerio" id="ministerio" required>
           <option Seleccione un elemento de la lista="">Elige...</option>
           <option>Juigalpa</option>
           <option>Villa Sandino</option>
@@ -186,27 +186,5 @@
     <br>
   </div>
 </form>
-
-<script>
-  // Ejemplo de JavaScript inicial para deshabilitar el envío de formularios si hay campos no válidos
-(function () {
-  'use strict'
-
-  // Obtener todos los formularios a los que queremos aplicar estilos de validación de Bootstrap personalizados
-  var forms = document.querySelectorAll('.needs-validation')
-
-  // Bucle sobre ellos y evitar el envío
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-        form.classList.add('was-validated')
-      }, false)
-    })
-})()
-</script>
 
 {% endblock %}
