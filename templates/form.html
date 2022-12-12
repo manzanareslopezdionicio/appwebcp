@@ -7,17 +7,17 @@
     <div class="card-header text-center">
         <h5>Datos Personales</h5>
     </div>
-    <form class="row g-3">
+    <form class="row g-3 needs-validation" novalidate>
     <div class="col-md-3">
       <label for="cedula" class="form-label">Cédula</label>
       <input type="text" class="form-control" name="cedula" id="cedula" placeholder="999-999999-9999A" required>
-      <div class="">
+      <div class="invalid-feedback">
         Por favor, agregar su cédula.
       </div>
     </div>
     <div class="col-md-3">
       <label for="nombres" class="form-label">Nombres</label>
-      <input type="text" class="form-control" name="nombrea" id="nombres" required>
+      <input type="text" class="form-control" name="nombre" id="nombres" required>
     </div>
     <div class="col-md-3">
       <label for="apellidos" class="form-label">Apellidos</label>
@@ -137,8 +137,8 @@
         </select>
       </div>
       <div class="col-md-3">
-        <label for="nombrecampo" class="form-label">Nombre de Campos</label>
-        <select class="form-select" id="nombrecampo" required>
+        <label for="nombrecampos" class="form-label">Nombre de Campos</label>
+        <select class="form-select" id="nombrecampos" required>
           <option Seleccione un elemento de la lista="">Elige...</option>
           <option>Juigalpa</option>
           <option>Villa Sandino</option>
@@ -186,5 +186,27 @@
     <br>
   </div>
 </form>
+
+<script>
+  // Ejemplo de JavaScript inicial para deshabilitar el envío de formularios si hay campos no válidos
+(function () {
+  'use strict'
+
+  // Obtener todos los formularios a los que queremos aplicar estilos de validación de Bootstrap personalizados
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Bucle sobre ellos y evitar el envío
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
 
 {% endblock %}
