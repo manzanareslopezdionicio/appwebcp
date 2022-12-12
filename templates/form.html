@@ -7,13 +7,11 @@
     <div class="card-header text-center">
         <h5>Datos Personales</h5>
     </div>
-    <form class="row g-3 needs-validation" novalidate>
+    <form class="row g-3">
     <div class="col-md-3">
       <label for="cedula" class="form-label">Cédula</label>
       <input type="text" class="form-control" name="cedula" id="cedula" placeholder="999-999999-9999A" required>
-      <div class="invalid-feedback">
-        Por favor, agregar su cédula.
-      </div>
+      
     </div>
     <div class="col-md-3">
       <label for="nombres" class="form-label">Nombres</label>
@@ -24,12 +22,14 @@
       <input type="text" class="form-control" name="apellidos" id="apellidos" required>
     </div>
     <div class="col-md-3">
-        <label for="email" class="form-label">Correo electronico</label>
-        <input type="email" class="form-control" name="email" id="email" required>
+        <label for="email" class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" name="email" id="email" placeholder="correo@correo.com" required>
+        <p class="formulario_input-error">El correo electrónico solo puede contener letras, numeros, puntos, guiones y guion bajo. </p>
     </div>
     <div class="col-md-3">
         <label for="telefono" class="form-label">Teléfono</label>
         <input type="text" class="form-control" name="telefono" data-mask="(505) 0000-0000" placeholder="(505) 9999-9999" required>
+        <p class="formulario_input-error">El teléfono solo puede contener números y el máximo de 8 digitos. </p>
     </div>
     <div class="col-md-3">
         <label for="direccion" class="form-label">Dirección</label>
@@ -186,27 +186,4 @@
     <br>
   </div>
 </form>
-
-<script>
-  // Ejemplo de JavaScript inicial para deshabilitar el envío de formularios si hay campos no válidos
-(function () {
-  'use strict'
-
-  // Obtener todos los formularios a los que queremos aplicar estilos de validación de Bootstrap personalizados
-  var forms = document.querySelectorAll('.needs-validation')
-
-  // Bucle sobre ellos y evitar el envío
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-        form.classList.add('was-validated')
-      }, false)
-    })
-})()
-</script>
-
 {% endblock %}
