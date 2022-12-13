@@ -11,15 +11,17 @@
     <div class="col-md-3">
       <label for="cedula" class="form-label">Cédula</label>
       <input type="text" class="form-control" name="cedula" id="cedula" placeholder="999-999999-9999A" required>
-      
+      <p class="formulario_input-error">La cédula debe ser numeros y la una letra al final</p>
     </div>
     <div class="col-md-3">
       <label for="nombres" class="form-label">Nombres</label>
       <input type="text" class="form-control" name="nombre" id="nombres" required>
+      <p class="formulario_input-error">Agregar un nombre correcto</p>
     </div>
     <div class="col-md-3">
       <label for="apellidos" class="form-label">Apellidos</label>
       <input type="text" class="form-control" name="apellidos" id="apellidos" required>
+      <p class="formulario_input-error">Agregar un apellido correcto</p>
     </div>
     <div class="col-md-3">
         <label for="email" class="form-label">Correo Electrónico</label>
@@ -34,13 +36,12 @@
     <div class="col-md-3">
         <label for="direccion" class="form-label">Dirección</label>
         <input type="text" class="form-control" name="direccion" id="direccion" required>
+        <p class="formulario_input-error">Agregar una direccion valida</p>
     </div>
     <div class="col-md-3">
         <label for="ciudad" class="form-label">Ciudad</label>
         <input type="text" class="form-control" name="ciudad" id="ciudad" required>
-        <div class="invalid-feedback">
-          Por favor, agregar una ciudad válida.
-        </div>
+        <p class="formulario_input-error">Por favor, agregar una ciudad válida.</p>
     </div>
     <div class="col-md-3">
         <label for="departamento" class="form-label">Departamento</label>
@@ -51,6 +52,7 @@
           <option>Masaya</option>
           <option>Granada</option>
         </select>
+        <p class="formulario_input-error">Seleccione un devartamento correcto...</p>
       </div>
       <div class="col-md-3">
         <label for="nivelacademico" class="form-label">Nivel Académico</label>
@@ -61,10 +63,12 @@
           <option>Primaria</option>
           <option>Ninguno</option>
         </select>
+        <p class="formulario_input-error">Seleccione el nivel academico</p>
       </div>
       <div class="col-md-3">
         <label for="profesion" class="form-label">Profesión o Oficio</label>
         <input type="text" class="form-control" name="profesion" id="profesion" required>
+        <p class="formulario_input-error">Agregar su profesión correcta</p>
       </div>
       <div class="col-md-3">
         <label for="estadocivil" class="form-laber">Estado Civil</label>
@@ -80,6 +84,7 @@
               Soltero(a)
           </label>
         </div>
+        <p class="formulario_input-error">Seleccionar el estado civil correcto...</p>
       </div>
       <div class="col-md-3">
         <label for="">Sexo</label>
@@ -95,10 +100,13 @@
               Femenino
           </label>
         </div>
+        <p class="formulario_input-error">Seleccionar el sexo correcto...</p>
       </div>
       <div class="col-md-12">
         <label for="foto" class="form-label">Subir Fotografia</label>
         <input type="file" class="form-control" name="foto" id="foto">
+        <p class="formulario_input-error">Subir foto</p>
+        
       </div>
       <div class="card-header text-center">
         <h5> Datos Ministerial</h5>
